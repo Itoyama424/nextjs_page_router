@@ -17,6 +17,15 @@ p {
 a {
   @apply m-5 font-bold text-blue-500 underline;
 }
+
+ul, ol {
+  @apply text-2xl m-5 list-disc;
+}
+
+li {
+  @apply text-xl mx-5 text-blue-700;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
