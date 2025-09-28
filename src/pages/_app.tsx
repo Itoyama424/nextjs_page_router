@@ -7,8 +7,8 @@ import Lyout from './layout'
 // Component {...pagePropes}という風に、呼び出されるページのコンポーネントとプロパティが渡される
 export default function App({ Component, pageProps }: AppProps) {
   return(
-    <Lyout>
-    <Component {...pageProps} />;
+    <Lyout {...pageProps}>
+    <Component {...pageProps} />
     </Lyout>
   )
 }
