@@ -6,8 +6,8 @@ const inter = Inter({ subsets:['latin']})
 export default function Home() {
   return (
     <main>
-      <p>This is sample page.</p>
-      <div><Link href="/other">Go "Other".</Link></div>
+      <h1>Static Page.</h1>
+      <p>これは、静的ページです。ビルド時にレンダリングされています。</p>
     </main>
   );
 }
