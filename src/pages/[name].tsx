@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { PageData, props } from '../types/types'
+import { PageData, props, dataMap } from '../types/types'
 import { GetStaticProps, GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType} from 'next'
 
 //type TestPageProps = InferGetStaticPropsType<typeof getStaticProps>; 
@@ -16,7 +16,11 @@ export default function Name({ data } : props) {
         </main>
     )
 }
+
 export const getStaticPaths: GetStaticPaths = async () => {
+
+console.log("GetStaticPaths!!");
+
     const paths = [
         { params: { name: 'taro' } },
         { params: { name: 'hanako' } },
@@ -27,8 +31,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
         fallback: false
     }
 }
-
-
 
 export const getStaticProps: GetStaticProps<{ data: PageData }> = async (context: GetStaticPropsContext) => {
     const { params } = context;
@@ -41,30 +43,13 @@ export const getStaticProps: GetStaticProps<{ data: PageData }> = async (context
 
     const name = params.name;
 
-    const dataMap: Record<string, PageData> = {
-        taro: {
-            title: 'Taro-web',
-            title2: 'This page is Taro-web.',
-            msg: "This is Taro's web site."
-        },
-        hanako: {
-            title: 'ハナコの部屋',
-            title2: 'これはハナコのページです。',
-            msg: 'ここはハナコの部屋です。'
-        },
-        sachiko: {
-            title: 'サチコのページ',
-            title2: 'これはサチコのページだよ。',
-            msg: 'ヤッホー、サチコのページだよ！'
-        }
-    };
-
     const data = dataMap[name];
         if (!data) {
         return {
             notFound: true
         };
     }
+
     return {
         props: {
             data

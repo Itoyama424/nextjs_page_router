@@ -5,11 +5,13 @@ import {props} from '../types/types';
 
 
 export const getStaticProps:GetStaticProps<props> = () => {
+
   const data = {
     title:"Index page",
     title2:"This page is Index.",
     msg:"これはトップページです。"
   }
+  
   return { props: {data}}
 }
 
