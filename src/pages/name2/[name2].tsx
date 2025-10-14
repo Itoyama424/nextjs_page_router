@@ -1,4 +1,4 @@
-import { props, PageData, dataMap } from '../../types/types';
+import { props, dataMap } from '../../types/types';
 import { useRouter } from 'next/router';
 import  Link  from 'next/link';
 import { GetServerSideProps } from 'next'

@@ -1,9 +1,9 @@
 import { props } from '@/types/types'
-import { Inter } from 'next/font/google'
+
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { GetStaticPropsContext } from 'next'
-import { dataMap ,PageData} from '@/types/types'
+import { GetStaticPropsContext, GetStaticProps, GetStaticPaths } from 'next'
+import { PageData} from '@/types/types'
 
 export default function Yama(props:props) {
     console.log("start component.")
@@ -22,7 +22,7 @@ export default function Yama(props:props) {
     )
 }
 
-export function getStaticPaths() {
+export const getStaticPaths : GetStaticPaths = () => {
     console.log("getStaticPaths.")
     const p = [
         {params:{yama:"tenzan"}},
@@ -35,7 +35,7 @@ export function getStaticPaths() {
     }
 }
 
-export function getStaticProps({params}:GetStaticPropsContext) {
+export const getStaticProps : GetStaticProps<{ data : PageData }> = ({params}:GetStaticPropsContext) => {
     console.log("getStaticProps")
 
     if(!params || !params.yama || typeof params.yama !== 'string') {

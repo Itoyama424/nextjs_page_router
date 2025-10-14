@@ -1,4 +1,4 @@
-import { PageData, props, LayoutInterface } from '../types/types';
+import {LayoutInterface } from '../types/types';
 
 export default function Layout({ children, pagedatas } : LayoutInterface) {
 

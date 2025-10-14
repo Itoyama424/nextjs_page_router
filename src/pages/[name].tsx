@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { PageData, props, dataMap } from '../types/types'
-import { GetStaticProps, GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType} from 'next'
+import { GetStaticProps, GetStaticPaths, GetStaticPropsContext} from 'next'
 
 //type TestPageProps = InferGetStaticPropsType<typeof getStaticProps>; 
 

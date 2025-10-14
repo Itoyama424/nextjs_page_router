@@ -17,8 +17,6 @@ export default function Umi({data} : props) {
 
 }
 
-
-
 export const getStaticPaths : GetStaticPaths = async () => {
 
     const paths = [
