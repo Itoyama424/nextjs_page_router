@@ -17,6 +17,22 @@ p {
 a {
   @apply m-5 font-bold text-blue-500 underline;
 }
+
+h1.header {
+  @apply text-2xl font-bold m-0 mb-5 px-5 py-3 text-white bg-red-900;
+}
+h1.header2 {
+  @apply text-lg font-bold m-0 mb-5 px-5 py-3 text-white bg-blue-900;
+}
+
+hr.footer {
+  @apply mt-10 mb-1 p-0;
+}
+
+p.footer {
+  @apply m-0 text-center text-sm font-bold;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -35,4 +51,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  @apply border p-2 m-5 w-20
+}
+
+.form {
+  @apply p-2 m-5;
+}
+
+textarea {
+  @apply border w-full;
+}
+
+button {
+  @apply px-7 py-2  mx-2 bg-blue-800 text-white rounded-lg
 }
