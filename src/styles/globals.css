@@ -52,3 +52,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+input {
+  @apply border p-2 m-5 w-20
+}
+
+.form {
+  @apply p-2 m-5;
+}
+
+textarea {
+  @apply border w-full;
+}
+
+button {
+  @apply px-7 py-2  mx-2 bg-blue-800 text-white rounded-lg
+}

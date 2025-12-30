@@ -1,0 +1,8 @@
+{
+    "message":"これはサンプルデータです。",
+    "data":[
+        {"name":"taro","mail":"taro@yamada","age":"39"},
+        {"name":"hanako","mail":"hanako@flower","age":"39"},
+        {"name":"sachiko","mail":"sachiko@happy","age":"39"}
+    ]
+}
